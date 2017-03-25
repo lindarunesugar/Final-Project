@@ -16,10 +16,11 @@ class SpringAnimeIntroViewController: ViewController {
     @IBOutlet weak var chinese: UILabel!
     @IBOutlet weak var japanese: UILabel!
     @IBOutlet weak var picture: UIImageView!
-    @IBOutlet weak var introduction: UILabel!
     @IBOutlet weak var time: UILabel!
+
+    @IBOutlet weak var introduction: UILabel!
     
-    @IBAction func plus_button(_ sender: Any)
+    @IBAction func plus_button(_ sender: UIButton)
     {
         
     }

@@ -397,6 +397,9 @@
                                             <constraint firstAttribute="width" constant="50" id="YcC-36-nfJ"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="plusButton"/>
+                                        <connections>
+                                            <action selector="plus_button:" destination="ACo-ZX-nlf" eventType="touchUpInside" id="w9g-eh-ZFo"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中文" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9Z-z3-Wzz">
                                         <rect key="frame" x="20" y="145" width="335" height="24"/>
@@ -466,6 +469,13 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1300"/>
+                    <connections>
+                        <outlet property="chinese" destination="t9Z-z3-Wzz" id="RJV-lq-lMj"/>
+                        <outlet property="introduction" destination="I1m-xA-OaK" id="agf-SB-Ab8"/>
+                        <outlet property="japanese" destination="VYo-35-OLy" id="QXM-6n-29I"/>
+                        <outlet property="picture" destination="k1M-Vl-BaY" id="dNt-d1-0Qk"/>
+                        <outlet property="time" destination="YhB-Ui-4Zg" id="xbD-n8-kYk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7i-sq-dPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
