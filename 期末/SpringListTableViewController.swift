@@ -10,6 +10,7 @@ import UIKit
 
 class SpringListTableViewController: UITableViewController
 {
+    
     let section = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
     let titles = [["怪怪守護神"],
                  ["從零開始的魔法書"],
@@ -72,7 +73,7 @@ class SpringListTableViewController: UITableViewController
     //設定cell的內容
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AnimeCell", for: indexPath)
         //出現小箭頭
         cell.accessoryType = .disclosureIndicator
         //標題--中文名稱
@@ -87,13 +88,22 @@ class SpringListTableViewController: UITableViewController
         cell.imageView?.layer.cornerRadius = 10
         cell.imageView?.layer.masksToBounds = true
         
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "Intro") as? SpringAnimeIntroViewController
-        controller?.chinese_title = cell.textLabel?.text
-        controller?.japanese_title = cell.detailTextLabel?.text
-
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let indexPath = tableView.indexPathForSelectedRow
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "Intro") as? SpringAnimeIntroViewController
+        let current_cell = tableView.cellForRow(at: indexPath!)
+            //as? UITableViewCell!
+        
+        //print(current_cell?.textLabel!.text!)
+        //print(current_cell?.detailTextLabel!.text!)
+        controller?.chinese_title = current_cell?.textLabel!.text!
+        controller?.japanese_title = current_cell?.detailTextLabel!.text!
     }
  
 

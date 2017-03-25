@@ -14,6 +14,7 @@
 		BA2076E91E86815200873575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2076E71E86815200873575 /* LaunchScreen.storyboard */; };
 		BA2076F11E86ACB100873575 /* SpringListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2076F01E86ACB100873575 /* SpringListTableViewController.swift */; };
 		BA2076F31E86C10000873575 /* SpringAnimeIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2076F21E86C10000873575 /* SpringAnimeIntroViewController.swift */; };
+		BA2076F51E86EBF900873575 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2076F41E86EBF900873575 /* ListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BA2076EA1E86815200873575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA2076F01E86ACB100873575 /* SpringListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringListTableViewController.swift; sourceTree = "<group>"; };
 		BA2076F21E86C10000873575 /* SpringAnimeIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimeIntroViewController.swift; sourceTree = "<group>"; };
+		BA2076F41E86EBF900873575 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				BA2076DE1E86815200873575 /* AppDelegate.swift */,
 				BA2076E01E86815200873575 /* ViewController.swift */,
 				BA2076E21E86815200873575 /* Main.storyboard */,
+				BA2076F41E86EBF900873575 /* ListTableViewCell.swift */,
 				BA2076F21E86C10000873575 /* SpringAnimeIntroViewController.swift */,
 				BA2076F01E86ACB100873575 /* SpringListTableViewController.swift */,
 				BA2076E51E86815200873575 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				BA2076DF1E86815200873575 /* AppDelegate.swift in Sources */,
 				BA2076F11E86ACB100873575 /* SpringListTableViewController.swift in Sources */,
 				BA2076F31E86C10000873575 /* SpringAnimeIntroViewController.swift in Sources */,
+				BA2076F51E86EBF900873575 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
