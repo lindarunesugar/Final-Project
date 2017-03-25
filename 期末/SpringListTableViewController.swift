@@ -66,7 +66,7 @@ class SpringListTableViewController: UITableViewController
     //每個cell的高度
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 69
+        return 55
     }
     
     //設定cell的內容
@@ -86,6 +86,10 @@ class SpringListTableViewController: UITableViewController
         //設定圖片圓角
         cell.imageView?.layer.cornerRadius = 10
         cell.imageView?.layer.masksToBounds = true
+        
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "Intro") as? SpringAnimeIntroViewController
+        controller?.chinese_title = cell.textLabel?.text
+        controller?.japanese_title = cell.detailTextLabel?.text
 
         // Configure the cell...
 

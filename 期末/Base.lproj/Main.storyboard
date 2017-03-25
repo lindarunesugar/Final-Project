@@ -80,7 +80,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ACo-ZX-nlf" kind="show" id="y9t-IV-vUM"/>
+                                    <segue destination="cRh-jU-9Cn" kind="show" id="hRo-b2-Uaf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -375,16 +375,16 @@
             </objects>
             <point key="canvasLocation" x="2015" y="953"/>
         </scene>
-        <!--View Controller-->
+        <!--Spring Anime Intro View Controller-->
         <scene sceneID="uGb-St-It5">
             <objects>
-                <viewController id="ACo-ZX-nlf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Intro" id="ACo-ZX-nlf" customClass="SpringAnimeIntroViewController" customModule="期末" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Xe-VQ-auh"/>
                         <viewControllerLayoutGuide type="bottom" id="AfL-tZ-SvJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dku-h5-REZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VB5-Y5-byE">
@@ -394,28 +394,116 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-m8-tmx">
-                                <rect key="frame" x="20" y="173" width="335" height="19.5"/>
+                                <rect key="frame" x="20" y="173" width="335" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8b-tC-73P">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IBA-hS-Rcc">
+                                        <rect key="frame" x="64" y="240" width="246" height="246"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="246" id="F32-dL-VIU"/>
+                                            <constraint firstAttribute="height" constant="246" id="KIM-aQ-JkR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZE-LA-Hfo">
+                                        <rect key="frame" x="40" y="526" width="294" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET8-7r-j1m">
+                                        <rect key="frame" x="40" y="600" width="294" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs8-ah-efj">
+                                        <rect key="frame" x="162" y="85" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="plusButton"/>
+                                        <connections>
+                                            <action selector="plus_button:" destination="ACo-ZX-nlf" eventType="touchUpInside" id="4kk-bV-m9x"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zZE-LA-Hfo" firstAttribute="top" secondItem="IBA-hS-Rcc" secondAttribute="bottom" constant="40" id="17X-aZ-Ztk"/>
+                                    <constraint firstAttribute="trailing" secondItem="IBA-hS-Rcc" secondAttribute="trailing" constant="64" id="6NI-Ua-WSD"/>
+                                    <constraint firstAttribute="trailing" secondItem="zZE-LA-Hfo" secondAttribute="trailing" constant="40" id="DLm-qN-enV"/>
+                                    <constraint firstAttribute="bottom" secondItem="ET8-7r-j1m" secondAttribute="bottom" constant="10" id="JtX-bK-5GE"/>
+                                    <constraint firstItem="ET8-7r-j1m" firstAttribute="top" secondItem="zZE-LA-Hfo" secondAttribute="bottom" constant="50" id="QgZ-Bh-z4B"/>
+                                    <constraint firstAttribute="trailing" secondItem="ET8-7r-j1m" secondAttribute="trailing" constant="40" id="RBM-fd-qmc"/>
+                                    <constraint firstItem="IBA-hS-Rcc" firstAttribute="top" secondItem="F8b-tC-73P" secondAttribute="top" constant="240" id="UWg-vV-cZV"/>
+                                    <constraint firstItem="IBA-hS-Rcc" firstAttribute="leading" secondItem="F8b-tC-73P" secondAttribute="leading" constant="64" id="WTC-Id-qhc"/>
+                                    <constraint firstItem="zZE-LA-Hfo" firstAttribute="leading" secondItem="F8b-tC-73P" secondAttribute="leading" constant="40" id="cV0-lc-MZb"/>
+                                    <constraint firstItem="ET8-7r-j1m" firstAttribute="leading" secondItem="F8b-tC-73P" secondAttribute="leading" constant="40" id="vnX-29-IDV"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VB5-Y5-byE" firstAttribute="centerX" secondItem="dku-h5-REZ" secondAttribute="centerX" id="0oO-8r-JfY"/>
                             <constraint firstAttribute="trailing" secondItem="4Dn-m8-tmx" secondAttribute="trailing" constant="20" id="1CC-7k-ZuS"/>
                             <constraint firstAttribute="trailing" secondItem="VB5-Y5-byE" secondAttribute="trailing" constant="20" id="2Uj-oK-c7Y"/>
+                            <constraint firstAttribute="trailing" secondItem="F8b-tC-73P" secondAttribute="trailing" id="7od-5F-LKt"/>
+                            <constraint firstItem="F8b-tC-73P" firstAttribute="leading" secondItem="dku-h5-REZ" secondAttribute="leading" id="IdZ-or-prE"/>
                             <constraint firstItem="4Dn-m8-tmx" firstAttribute="leading" secondItem="dku-h5-REZ" secondAttribute="leading" constant="20" id="MqZ-eD-9ag"/>
                             <constraint firstItem="VB5-Y5-byE" firstAttribute="top" secondItem="1Xe-VQ-auh" secondAttribute="bottom" constant="80" id="NdA-mu-OFE"/>
+                            <constraint firstItem="F8b-tC-73P" firstAttribute="top" secondItem="dku-h5-REZ" secondAttribute="top" id="Pit-OE-Kbh"/>
                             <constraint firstItem="VB5-Y5-byE" firstAttribute="leading" secondItem="dku-h5-REZ" secondAttribute="leading" constant="20" id="jXI-eu-xg2"/>
                             <constraint firstItem="4Dn-m8-tmx" firstAttribute="top" secondItem="VB5-Y5-byE" secondAttribute="bottom" constant="5" id="jcI-4u-D4Q"/>
                             <constraint firstItem="4Dn-m8-tmx" firstAttribute="centerX" secondItem="dku-h5-REZ" secondAttribute="centerX" id="jz9-ij-W3a"/>
+                            <constraint firstAttribute="bottom" secondItem="F8b-tC-73P" secondAttribute="bottom" id="z4e-zC-TNd"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1300"/>
+                    <connections>
+                        <outlet property="chinese" destination="VB5-Y5-byE" id="MC6-9C-UPB"/>
+                        <outlet property="introduction" destination="ET8-7r-j1m" id="XKV-UQ-HNK"/>
+                        <outlet property="japanese" destination="4Dn-m8-tmx" id="8dS-J6-i5m"/>
+                        <outlet property="picture" destination="IBA-hS-Rcc" id="PZI-QW-8kV"/>
+                        <outlet property="time" destination="zZE-LA-Hfo" id="hco-Tg-uba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7i-sq-dPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5423.1999999999998" y="-234.33283358320841"/>
+            <point key="canvasLocation" x="6305" y="-519"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cie-wG-qKq">
+            <objects>
+                <viewController id="cRh-jU-9Cn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SP9-F0-LwZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="lCI-pF-fT0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hjB-qB-R63">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="背景" translatesAutoresizingMaskIntoConstraints="NO" id="acv-K8-3ui">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZm-fp-ynJ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="ACo-ZX-nlf" kind="show" id="5vx-gX-FRp"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4i8-rD-PCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5469.6000000000004" y="-234.33283358320841"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zfB-Dl-8zd">
@@ -455,6 +543,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plusButton" width="256" height="256"/>
         <image name="信長的忍者～伊勢金金崎篇～" width="241" height="241"/>
         <image name="夏目友人帳 陸" width="335" height="335"/>
         <image name="從零開始的魔法書" width="340" height="340"/>
@@ -464,6 +553,7 @@
         <image name="本季新番" width="29" height="30"/>
         <image name="本季新番back" width="750" height="1344"/>
         <image name="本季新番列表button" width="300" height="83"/>
+        <image name="背景" width="750" height="1344"/>
         <image name="進擊的巨人 第2期" width="348" height="349"/>
         <image name="重啟咲良田" width="347" height="347"/>
     </resources>
