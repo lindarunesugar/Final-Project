@@ -17,14 +17,19 @@ class PastEditViewController: UIViewController
     @IBOutlet weak var japanese_textfield: UITextField!
     @IBOutlet weak var schedule_textfield: UITextField!
     
-    
     @IBAction func save_button(_ sender: Any)
     {
-        
+        //將更改或新增的資料存入
+        Anime_info_selected = ["中文名稱":self.chinese_textfield.text!,"日文名稱":self.japanese_textfield.text!,"追番進度":self.schedule_textfield.text!]
+        let notificationName = Notification.Name("EditAnimeNoti")
+        NotificationCenter.default.post(name: notificationName, object: nil, userInfo: Anime_info_selected)
+        //回去前一個頁面
+        self.navigationController?.popViewController(animated: true)
     }
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //已有東西->從Detail頁面進來的，因此顯示原先輸入的原始資料
         if Anime_info_selected != nil
         {
             self.chinese_textfield.text = Anime_info_selected["中文名稱"]
