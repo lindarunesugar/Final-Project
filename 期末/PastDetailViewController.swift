@@ -44,6 +44,7 @@ class PastDetailViewController: UIViewController
     {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
         //讓controller變成PastEditViewController
         let controller = segue.destination as! PastEditViewController
         //把這個變數傳送到編輯頁面相對應的變數裡

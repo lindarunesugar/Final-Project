@@ -38,7 +38,7 @@ class PastAnimeListTableViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        //接收通知
         let notificationName = Notification.Name("EditAnimeNoti")
         NotificationCenter.default.addObserver(self, selector: #selector(PastAnimeListTableViewController.edit_data(noti:)), name: notificationName, object: nil)
         // Uncomment the following line to preserve selection between presentations
@@ -95,6 +95,7 @@ class PastAnimeListTableViewController: UITableViewController
     {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
         //如果觸發來到Detail頁面--PastDetailViewController
         if segue.destination is PastDetailViewController
         {
