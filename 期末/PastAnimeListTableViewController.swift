@@ -1,33 +1,18 @@
 //
-//  SpringListTableViewController.swift
+//  PastAnimeListTableViewController.swift
 //  期末
 //
-//  Created by Huang Pi-Ling on 2017/3/25.
+//  Created by Huang Pi-Ling on 2017/3/26.
 //  Copyright © 2017年 Huang Pi-Ling. All rights reserved.
 //
 
 import UIKit
 
-class SpringListTableViewController: UITableViewController
+class PastAnimeListTableViewController: UITableViewController
 {
+    @IBOutlet var PastListTableView: UITableView!
     
-    let section = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
-    let titles = [["怪怪守護神"],
-                 ["從零開始的魔法書"],
-                 ["夏目友人帳 陸"],
-                 ["重啟咲良田"],
-                 ["月色真美"],
-                 ["信長的忍者～伊勢金金崎篇～"],
-                 ["進擊的巨人 第2期"]]
-    let subtitles = [["つぐもも"],
-                     ["ゼロから始める魔法の書"],
-                     ["夏目友人帳 陸"],
-                     ["サクラダリセット"],
-                     ["月がきれい"],
-                     ["信長の忍び〜伊勢金々崎篇～"],
-                     ["進撃の巨人 Season 2"]]
-    
-    @IBOutlet var spring_table_view: UITableView!
+    var Anime_info = [["中文名稱":"暗殺教室","日文名稱":"暗殺教室","追番進度":"第3話"],["中文名稱":"暗殺教室","日文名稱":"暗殺教室","追番進度":"第3話"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,23 +31,14 @@ class SpringListTableViewController: UITableViewController
 
     // MARK: - Table view data source
 
-    //幾個section
-    override func numberOfSections(in tableView: UITableView) -> Int
-    {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return self.section.count
-    }
-    
-    //section的標題
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
-    {
-        return self.section[section]
+        return 1
     }
 
-    //每個section下row的數量
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.titles[section].count
+        return Anime_info.count
     }
 
     //每個cell的高度
@@ -71,49 +47,31 @@ class SpringListTableViewController: UITableViewController
         return 55
     }
     
-    //設定cell的內容
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AnimeCell", for: indexPath)
-        //出現小箭頭
-        cell.accessoryType = .disclosureIndicator
-        //標題--中文名稱
-        cell.textLabel?.text = self.titles[indexPath.section][indexPath.row]
-        //副標題--日文名稱
-        cell.detailTextLabel?.text = self.subtitles[indexPath.section][indexPath.row]
-        //設定副標題的顏色為darkGray
-        cell.detailTextLabel?.textColor = UIColor .darkGray
-        //設定cell上的圖片
-        cell.imageView!.image = UIImage(named: self.titles[indexPath.section][indexPath.row])
-        //設定圖片圓角
-        cell.imageView?.layer.cornerRadius = 10
-        cell.imageView?.layer.masksToBounds = true
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PastCell", for: indexPath) as! PastListTableViewCell
+        let dic = Anime_info[indexPath.row]
+        cell.chinese.text = dic["中文名稱"]
+        cell.japanese.text = dic["日文名稱"]
+        cell.schedule.text = dic["追番進度"]
         
         // Configure the cell...
 
         return cell
     }
-    
-    //準備把資料傳給介紹頁面
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let controller = segue.destination as! SpringAnimeIntroViewController
-        let indexPath = self.spring_table_view.indexPathForSelectedRow
-        let chinese_select = titles[(indexPath?.section)!][(indexPath?.row)!]
-        let japanese_select = subtitles[(indexPath?.section)!][(indexPath?.row)!]
-        
-        controller.chinese_title = chinese_select
-        controller.japanese_title = japanese_select
+        if segue.destination is PastDetailViewController
+        {
+            let controller = segue.destination as! PastDetailViewController
+            let indexPath = self.PastListTableView.indexPathForSelectedRow
+            let anime_seleted = Anime_info[indexPath!.row]
+            controller.Anime_info_selected = anime_seleted
+        }
     }
-
-    /*
-     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-     {
-     
-     }
-     */
     
     /*
     // Override to support conditional editing of the table view.

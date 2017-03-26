@@ -66,6 +66,7 @@ class SpringAnimeIntroViewController: ViewController {
             default: break
             
         }
+ 
         // Do any additional setup after loading the view.
     }
 

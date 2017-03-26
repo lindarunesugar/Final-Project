@@ -15,6 +15,10 @@
 		BA2076F11E86ACB100873575 /* SpringListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2076F01E86ACB100873575 /* SpringListTableViewController.swift */; };
 		BA2076F31E86C10000873575 /* SpringAnimeIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2076F21E86C10000873575 /* SpringAnimeIntroViewController.swift */; };
 		BA2076F51E86EBF900873575 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2076F41E86EBF900873575 /* ListTableViewCell.swift */; };
+		BA2077171E8798D700873575 /* PastAnimeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2077161E8798D700873575 /* PastAnimeListTableViewController.swift */; };
+		BA20771F1E87B89A00873575 /* PastListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA20771E1E87B89A00873575 /* PastListTableViewCell.swift */; };
+		BA2077211E87BEF200873575 /* PastEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2077201E87BEF200873575 /* PastEditViewController.swift */; };
+		BA2077231E87BF0100873575 /* PastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2077221E87BF0100873575 /* PastDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		BA2076F01E86ACB100873575 /* SpringListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringListTableViewController.swift; sourceTree = "<group>"; };
 		BA2076F21E86C10000873575 /* SpringAnimeIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimeIntroViewController.swift; sourceTree = "<group>"; };
 		BA2076F41E86EBF900873575 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		BA2077161E8798D700873575 /* PastAnimeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastAnimeListTableViewController.swift; sourceTree = "<group>"; };
+		BA20771E1E87B89A00873575 /* PastListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PastListTableViewCell.swift; path = ../PastListTableViewCell.swift; sourceTree = "<group>"; };
+		BA2077201E87BEF200873575 /* PastEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastEditViewController.swift; sourceTree = "<group>"; };
+		BA2077221E87BF0100873575 /* PastDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				BA2076DE1E86815200873575 /* AppDelegate.swift */,
 				BA2076E01E86815200873575 /* ViewController.swift */,
 				BA2076E21E86815200873575 /* Main.storyboard */,
+				BA2077201E87BEF200873575 /* PastEditViewController.swift */,
+				BA2077221E87BF0100873575 /* PastDetailViewController.swift */,
+				BA20771E1E87B89A00873575 /* PastListTableViewCell.swift */,
+				BA2077161E8798D700873575 /* PastAnimeListTableViewController.swift */,
 				BA2076F41E86EBF900873575 /* ListTableViewCell.swift */,
 				BA2076F21E86C10000873575 /* SpringAnimeIntroViewController.swift */,
 				BA2076F01E86ACB100873575 /* SpringListTableViewController.swift */,
@@ -146,8 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2077171E8798D700873575 /* PastAnimeListTableViewController.swift in Sources */,
 				BA2076E11E86815200873575 /* ViewController.swift in Sources */,
+				BA2077231E87BF0100873575 /* PastDetailViewController.swift in Sources */,
+				BA20771F1E87B89A00873575 /* PastListTableViewCell.swift in Sources */,
 				BA2076DF1E86815200873575 /* AppDelegate.swift in Sources */,
+				BA2077211E87BEF200873575 /* PastEditViewController.swift in Sources */,
 				BA2076F11E86ACB100873575 /* SpringListTableViewController.swift in Sources */,
 				BA2076F31E86C10000873575 /* SpringAnimeIntroViewController.swift in Sources */,
 				BA2076F51E86EBF900873575 /* ListTableViewCell.swift in Sources */,
