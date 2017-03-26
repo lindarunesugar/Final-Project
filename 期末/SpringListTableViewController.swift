@@ -99,11 +99,16 @@ class SpringListTableViewController: UITableViewController
     {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let controller = segue.destination as! SpringAnimeIntroViewController
-        let indexPath = self.spring_table_view.indexPathForSelectedRow
-        let chinese_select = titles[(indexPath?.section)!][(indexPath?.row)!]
-        let japanese_select = subtitles[(indexPath?.section)!][(indexPath?.row)!]
         
+        //segue的終點一定是SpringAnimeIntroViewController
+        let controller = segue.destination as! SpringAnimeIntroViewController
+        //選到的是哪一個row
+        let indexPath = self.spring_table_view.indexPathForSelectedRow
+        //先把中文標題存到chinese_select
+        let chinese_select = titles[(indexPath?.section)!][(indexPath?.row)!]
+        //先把日文標題存到japanese_select
+        let japanese_select = subtitles[(indexPath?.section)!][(indexPath?.row)!]
+        //把中文＆日文標題傳送到SpringAnimeIntroViewController中事先令好要接收資料的變數裡
         controller.chinese_title = chinese_select
         controller.japanese_title = japanese_select
     }

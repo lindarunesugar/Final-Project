@@ -29,10 +29,14 @@ class SpringAnimeIntroViewController: ViewController {
     {
         super.viewDidLoad()
 
+        //傳入中文標題
         self.chinese.text = self.chinese_title
+        //傳入日文標題
         self.japanese.text = self.japanese_title
+        //顯示相對應之圖片
         self.picture.image = UIImage(named: chinese_title)
         
+        //藉由判斷中文標題來決定要顯示該部動畫之方送日期及介紹
         switch self.chinese.text!
         {
             case "怪怪守護神":
