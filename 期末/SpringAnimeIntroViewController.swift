@@ -31,7 +31,7 @@ class SpringAnimeIntroViewController: ViewController {
 
         self.chinese.text = self.chinese_title
         self.japanese.text = self.japanese_title
-        self.picture.image = UIImage(named: chinese_title + ".jpg")
+        self.picture.image = UIImage(named: chinese_title)
         
         switch self.chinese.text!
         {
