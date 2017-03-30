@@ -14,8 +14,9 @@ class PastAnimeListTableViewController: UITableViewController
     
     var Anime_info = [["中文名稱":"暗殺教室","日文名稱":"暗殺教室","追番進度":"第3話"],["中文名稱":"進擊的巨人","日文名稱":"進撃の巨人","追番進度":"第23話"]]
     
+    //申請接受通知
     //接收通知的判斷
-    func edit_data(noti:Notification)
+    func get_edit_data(noti:Notification)
     {
         //接收到的資料，轉型成[String:String]
         let new = noti.userInfo as! [String:String]
@@ -35,12 +36,14 @@ class PastAnimeListTableViewController: UITableViewController
         //更新TableView
         self.PastListTableView.reloadData()
     }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //接收通知
+        
+        //申請接受通知
         let notificationName = Notification.Name("EditAnimeNoti")
-        NotificationCenter.default.addObserver(self, selector: #selector(PastAnimeListTableViewController.edit_data(noti:)), name: notificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(PastAnimeListTableViewController.get_edit_data(noti:)), name: notificationName, object: nil)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

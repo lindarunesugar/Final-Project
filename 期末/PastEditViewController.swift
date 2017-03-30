@@ -73,7 +73,7 @@ class PastEditViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         {
             //存入textfield及array
             schedule_textfield.text = "第\(schdule_content[row])話"
-            Anime_info_selected["追番進度"] = "第\(schdule_content[row])話"
+            //Anime_info_selected["追番進度"] = "第\(schdule_content[row])話"
         }
     }
     
