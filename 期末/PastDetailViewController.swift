@@ -39,6 +39,7 @@ class PastDetailViewController: UIViewController
         self.schedule_in_detail.text = Anime_info_selected["追番進度"]
         // Do any additional setup after loading the view.
     }
+    
     //準備把資料傳送到編輯頁面
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -50,7 +51,6 @@ class PastDetailViewController: UIViewController
         //把這個變數傳送到編輯頁面相對應的變數裡
         controller.Anime_info_selected = self.Anime_info_selected
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

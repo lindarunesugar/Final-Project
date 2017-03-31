@@ -20,7 +20,7 @@ class PastAnimeListTableViewController: UITableViewController
     {
         //接收到的資料，轉型成[String:String]
         let new = noti.userInfo as! [String:String]
-        //判斷有沒有被選到
+        //判斷表格有沒有被選到
         if self.PastListTableView.indexPathForSelectedRow != nil
         {
             //有被選過->修改資料

@@ -17,13 +17,13 @@ class PastEditViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     //設置PickerView內容
     var schdule_content = ["2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52"]
     
-    //共有幾項
+    //共有幾個column
     func numberOfComponents(in pickerView: UIPickerView) -> Int
     {
         return 3
     }
     
-    //每個row的數量
+    //每個column的數量
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
         //第一列
@@ -73,7 +73,6 @@ class PastEditViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         {
             //存入textfield及array
             schedule_textfield.text = "第\(schdule_content[row])話"
-            //Anime_info_selected["追番進度"] = "第\(schdule_content[row])話"
         }
     }
     
@@ -91,6 +90,7 @@ class PastEditViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         //回去前一個頁面
         self.navigationController?.popViewController(animated: true)
     }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -103,6 +103,7 @@ class PastEditViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         schedule_textfield.inputView = schdule_picker
         
         //已有東西->從Detail頁面進來的，因此顯示原先輸入的原始資料
+        //沒有東西->從新增按鈕進來的，因此不顯示任何東西
         if Anime_info_selected != nil
         {
             self.chinese_textfield.text = Anime_info_selected["中文名稱"]

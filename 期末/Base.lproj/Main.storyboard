@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFt-6K-u1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4836" y="1782"/>
+            <point key="canvasLocation" x="4790" y="1782"/>
         </scene>
         <!--番組內容-->
         <scene sceneID="til-B5-kdr">
@@ -610,7 +610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGK-l4-lBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4836" y="2578"/>
+            <point key="canvasLocation" x="4790" y="2579"/>
         </scene>
     </scenes>
     <resources>
@@ -623,6 +623,6 @@
         <image name="背景" width="750" height="1344"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y05-W3-yox"/>
+        <segue reference="jFO-el-uK1"/>
     </inferredMetricsTieBreakers>
 </document>
